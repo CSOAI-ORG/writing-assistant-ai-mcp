@@ -1,0 +1,10 @@
+name: writing-assistant-ai-mcp
+description: "MEOK AI Labs — Content writing toolkit for AI agents: headline generation, readability scoring,"
+vendor: MEOK AI Labs
+homepage: https://meok.ai
+repository: https://github.com/CSOAI-ORG/writing-assistant-ai-mcp
+license: MIT
+categories: [Writing, Content Creation]
+tags: [writing-assistant, content-writing, creative-writing, copywriting, editing]
+runtime: python
+entrypoint: server.py
