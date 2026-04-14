@@ -138,8 +138,7 @@ def _generate_headlines(topic: str, style: str, count: int,
         headline = tmpl.format(
             topic=topic, audience=target_audience,
             verb=verbs[i % len(verbs)], adj=adjectives[i % len(adjectives)],
-            n=numbers[i % len(numbers)], year=year,
-        )
+            n=numbers[i % len(numbers)], year=year)
         word_count = len(headline.split())
         char_count = len(headline)
         headlines.append({
@@ -424,8 +423,7 @@ def _check_similarity(text_a: str, text_b: str) -> dict:
 # ---------------------------------------------------------------------------
 mcp = FastMCP(
     "Writing Assistant AI MCP",
-    instructions="Content writing toolkit: headline generation, readability scoring, tone analysis, outline building, and plagiarism similarity checking. By MEOK AI Labs.",
-)
+    instructions="Content writing toolkit: headline generation, readability scoring, tone analysis, outline building, and plagiarism similarity checking. By MEOK AI Labs.")
 
 
 @mcp.tool()
