@@ -11,6 +11,11 @@ Install: pip install mcp
 Run:     python server.py
 """
 
+
+import sys, os
+sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
+from auth_middleware import check_access
+
 import hashlib
 import math
 import re
@@ -428,7 +433,7 @@ mcp = FastMCP(
 
 @mcp.tool()
 def generate_headlines(topic: str, style: str = "power", count: int = 5,
-                       target_audience: str = "professionals") -> dict:
+                       target_audience: str = "professionals", api_key: str = "") -> dict:
     """Generate headline variations for a given topic. Returns multiple options
     with SEO length checks and power word analysis.
 
@@ -438,6 +443,10 @@ def generate_headlines(topic: str, style: str = "power", count: int = 5,
         count: Number of headlines to generate (max 15)
         target_audience: Who the content is for
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     err = _check_rate_limit()
     if err:
         return {"error": err}
@@ -448,7 +457,7 @@ def generate_headlines(topic: str, style: str = "power", count: int = 5,
 
 
 @mcp.tool()
-def score_readability(text: str) -> dict:
+def score_readability(text: str, api_key: str = "") -> dict:
     """Calculate readability metrics for text: Flesch Reading Ease, Flesch-Kincaid
     Grade Level, Gunning Fog Index, Coleman-Liau Index. Also flags long sentences
     and filler words.
@@ -456,6 +465,10 @@ def score_readability(text: str) -> dict:
     Args:
         text: The text to analyze (minimum ~50 words recommended)
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     err = _check_rate_limit()
     if err:
         return {"error": err}
@@ -466,7 +479,7 @@ def score_readability(text: str) -> dict:
 
 
 @mcp.tool()
-def analyze_tone(text: str) -> dict:
+def analyze_tone(text: str, api_key: str = "") -> dict:
     """Analyze the tone and style of text. Detects formal, casual, academic,
     persuasive, technical, and emotional tones. Also checks active vs passive
     voice and power word usage.
@@ -474,6 +487,10 @@ def analyze_tone(text: str) -> dict:
     Args:
         text: The text to analyze
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     err = _check_rate_limit()
     if err:
         return {"error": err}
@@ -485,7 +502,7 @@ def analyze_tone(text: str) -> dict:
 
 @mcp.tool()
 def build_outline(topic: str, depth: int = 2, style: str = "blog",
-                  target_word_count: int = 1500) -> dict:
+                  target_word_count: int = 1500, api_key: str = "") -> dict:
     """Build a structured content outline with sections, word allocations,
     and SEO keyword suggestions.
 
@@ -495,6 +512,10 @@ def build_outline(topic: str, depth: int = 2, style: str = "blog",
         style: Content format (blog, essay, tutorial, landing_page, whitepaper)
         target_word_count: Target total word count
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     err = _check_rate_limit()
     if err:
         return {"error": err}
@@ -505,7 +526,7 @@ def build_outline(topic: str, depth: int = 2, style: str = "blog",
 
 
 @mcp.tool()
-def check_similarity(text_a: str, text_b: str) -> dict:
+def check_similarity(text_a: str, text_b: str, api_key: str = "") -> dict:
     """Check similarity between two texts using Jaccard, cosine, and trigram
     overlap metrics. Returns a plagiarism risk assessment.
 
@@ -513,6 +534,10 @@ def check_similarity(text_a: str, text_b: str) -> dict:
         text_a: First text
         text_b: Second text to compare against
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     err = _check_rate_limit()
     if err:
         return {"error": err}

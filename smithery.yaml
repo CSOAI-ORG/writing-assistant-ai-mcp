@@ -1,10 +1,55 @@
 name: writing-assistant-ai-mcp
-description: "MEOK AI Labs — Content writing toolkit for AI agents: headline generation, readability scoring,"
-vendor: MEOK AI Labs
-homepage: https://meok.ai
-repository: https://github.com/CSOAI-ORG/writing-assistant-ai-mcp
-license: MIT
-categories: [Writing, Content Creation]
-tags: [writing-assistant, content-writing, creative-writing, copywriting, editing]
-runtime: python
-entrypoint: server.py
+description: '**By MEOK AI Labs** | [meok.ai](https://meok.ai)'
+version: 1.0.0
+tools:
+- name: generate_headlines
+  description: Generate headline variations for a given topic. Returns multiple options
+  parameters:
+  - name: topic
+    type: string
+    required: true
+  - name: style
+    type: string
+    required: false
+  - name: count
+    type: integer
+    required: false
+  - name: target_audience
+    type: string
+    required: false
+- name: score_readability
+  description: 'Calculate readability metrics for text: Flesch Reading Ease, Flesch-Kincaid'
+  parameters:
+  - name: text
+    type: string
+    required: true
+- name: analyze_tone
+  description: Analyze the tone and style of text. Detects formal, casual, academic,
+  parameters:
+  - name: text
+    type: string
+    required: true
+- name: build_outline
+  description: Build a structured content outline with sections, word allocations,
+  parameters:
+  - name: topic
+    type: string
+    required: true
+  - name: depth
+    type: integer
+    required: false
+  - name: style
+    type: string
+    required: false
+  - name: target_word_count
+    type: integer
+    required: false
+- name: check_similarity
+  description: Check similarity between two texts using Jaccard, cosine, and trigram
+  parameters:
+  - name: text_a
+    type: string
+    required: true
+  - name: text_b
+    type: string
+    required: true

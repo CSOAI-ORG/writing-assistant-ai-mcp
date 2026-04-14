@@ -1,24 +1,104 @@
 {
   "name": "writing-assistant-ai-mcp",
-  "description": "MEOK AI Labs \u2014 Content writing toolkit for AI agents: headline generation, readability scoring,",
-  "vendor": "MEOK AI Labs",
-  "homepage": "https://meok.ai",
-  "repository": "https://github.com/CSOAI-ORG/writing-assistant-ai-mcp",
-  "runtime": "python",
-  "entrypoint": "server.py",
+  "description": "**By MEOK AI Labs** | [meok.ai](https://meok.ai)",
+  "version": "1.0.0",
   "tools": [
-    "generate_headlines",
-    "score_readability",
-    "analyze_tone",
-    "build_outline",
-    "check_similarity"
-  ],
-  "categories": [
-    "Writing",
-    "Content Creation"
-  ],
-  "pricing": {
-    "free": "50 calls/day",
-    "pro": "$9/mo"
-  }
+    {
+      "name": "generate_headlines",
+      "description": "Generate headline variations for a given topic. Returns multiple options",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "topic": {
+            "type": "string"
+          },
+          "style": {
+            "type": "string"
+          },
+          "count": {
+            "type": "integer"
+          },
+          "target_audience": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "topic"
+        ]
+      }
+    },
+    {
+      "name": "score_readability",
+      "description": "Calculate readability metrics for text: Flesch Reading Ease, Flesch-Kincaid",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "text"
+        ]
+      }
+    },
+    {
+      "name": "analyze_tone",
+      "description": "Analyze the tone and style of text. Detects formal, casual, academic,",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "text"
+        ]
+      }
+    },
+    {
+      "name": "build_outline",
+      "description": "Build a structured content outline with sections, word allocations,",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "topic": {
+            "type": "string"
+          },
+          "depth": {
+            "type": "integer"
+          },
+          "style": {
+            "type": "string"
+          },
+          "target_word_count": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "topic"
+        ]
+      }
+    },
+    {
+      "name": "check_similarity",
+      "description": "Check similarity between two texts using Jaccard, cosine, and trigram",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "text_a": {
+            "type": "string"
+          },
+          "text_b": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "text_a",
+          "text_b"
+        ]
+      }
+    }
+  ]
 }
