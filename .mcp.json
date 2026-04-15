@@ -1,6 +1,6 @@
 {
   "name": "writing-assistant-ai-mcp",
-  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 Content writing toolkit: headline generation, readability scoring, tone analysis, outline building, ",
+  "description": "Writing Assistant Ai tools for AI agents. Capabilities: generate headlines, score readability, analyze tone. Built by MEOK AI Labs.",
   "version": "1.0.0",
   "tools": [
     {
