@@ -1,0 +1,10 @@
+{
+  "name": "writing-assistant-ai-mcp",
+  "description": "MEOK AI Labs \u2014 writing-assistant-ai-mcp",
+  "vendor": "MEOK AI Labs",
+  "homepage": "https://meok.ai",
+  "repository": "https://github.com/CSOAI-ORG/writing-assistant-ai-mcp",
+  "license": "MIT",
+  "runtime": "python",
+  "entryPoint": "mcp-wrapper.py"
+}
