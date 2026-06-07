@@ -1,0 +1,23 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "writing-assistant-ai-mcp",
+    "description": "Writing Assistant Ai tools for AI agents. Capabilities: generate headlines, score readability",
+    "version": "1.0.5",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "writing-assistant-ai-mcp"
+      }
+    ],
+    "capabilities": [
+      "generate_headlines",
+      "score_readability",
+      "analyze_tone",
+      "build_outline",
+      "check_similarity"
+    ]
+  }
+}

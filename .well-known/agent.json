@@ -1,0 +1,68 @@
+{
+  "name": "writing-assistant-ai-mcp",
+  "description": "Writing Assistant Ai tools for AI agents. Capabilities: generate headlines, score readability",
+  "url": "https://proofof.ai/scorecard/writing-assistant-ai-mcp.html",
+  "version": "1.0.5",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "generate_headlines",
+      "name": "Generate Headlines",
+      "description": "generate_headlines via writing-assistant-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "score_readability",
+      "name": "Score Readability",
+      "description": "score_readability via writing-assistant-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "analyze_tone",
+      "name": "Analyze Tone",
+      "description": "analyze_tone via writing-assistant-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "build_outline",
+      "name": "Build Outline",
+      "description": "build_outline via writing-assistant-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "check_similarity",
+      "name": "Check Similarity",
+      "description": "check_similarity via writing-assistant-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}
