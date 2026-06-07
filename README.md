@@ -1,3 +1,5 @@
+[![MCP Scorecard: 86/100](https://img.shields.io/badge/proofof.ai-86%2F100-5b21b6)](https://proofof.ai/scorecard/writing-assistant-ai-mcp.html)
+
 # Writing Assistant Ai MCP
 mcp-name: io.github.CSOAI-ORG/writing-assistant-ai-mcp
 
