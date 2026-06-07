@@ -1,0 +1,9 @@
+# writing-assistant-ai-mcp - Auto-trigger Rules
+
+When the user asks about writing assistant, use writing-assistant-ai-mcp tools: generate_headlines, score_readability, analyze_tone, build_outline, check_similarity
+
+**By MEOK AI Labs** | [meok.ai](https://meok.ai)
+
+Install: `pip install writing-assistant-ai-mcp`
+
+By MEOK AI Labs — MIT licensed.

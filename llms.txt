@@ -1,0 +1,36 @@
+# writing-assistant-ai-mcp
+# **By MEOK AI Labs** | [meok.ai](https://meok.ai)
+
+## Install
+```bash
+pip install writing-assistant-ai-mcp
+```
+
+## Auth & Rate Limits
+- Free tier: 10 calls/day. No API key required.
+- Pro tier (£79/mo): unlimited + signed attestations.
+- Enterprise (£1,499/mo): white-label.
+
+## Tools
+
+### `generate_headlines`
+Generate headline variations for a given topic. Returns multiple options
+
+### `score_readability`
+Calculate readability metrics for text: Flesch Reading Ease, Flesch-Kincaid
+
+### `analyze_tone`
+Analyze the tone and style of text. Detects formal, casual, academic,
+
+### `build_outline`
+Build a structured content outline with sections, word allocations,
+
+### `check_similarity`
+Check similarity between two texts using Jaccard, cosine, and trigram
+
+
+## Maintainer
+MEOK AI Labs · hello@meok.ai · https://meok.ai · MIT licensed
+
+## Pairs with
+Governance moat: pair this tool with any of MEOK's 38 governance MCPs (EU AI Act, DORA, NIS2, CRA, GDPR, ISO 42001, etc.) for full compliance coverage.

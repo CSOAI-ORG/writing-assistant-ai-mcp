@@ -1,0 +1,28 @@
+{
+  "name": "writing-assistant-ai-mcp",
+  "title": "Writing Assistant Ai Mcp",
+  "description": "Writing Assistant Ai tools for AI agents. Capabilities: generate headlines, score readability, analyze tone. Built by MEOK AI Labs.",
+  "version": "1.0.5",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "generate_headlines"
+    },
+    {
+      "name": "score_readability"
+    },
+    {
+      "name": "analyze_tone"
+    },
+    {
+      "name": "build_outline"
+    },
+    {
+      "name": "check_similarity"
+    }
+  ]
+}
