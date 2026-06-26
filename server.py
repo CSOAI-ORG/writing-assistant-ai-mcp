@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 """
+Buy Pro: https://www.csoai.org/checkout
+
 Writing Assistant AI MCP Server
 ==================================
 Content writing toolkit for AI agents: headline generation, readability scoring,
